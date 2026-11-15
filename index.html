@@ -8,7 +8,7 @@
   <meta name="description" content="Видеопродакшн полного цикла с 2015 года: корпоративные и имиджевые фильмы, рекламные ролики, контент для соцсетей. Новосибирск, Москва, вся Россия. Награды Cannes Corporate и New York Festivals.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,150 +17,106 @@
   <header class="header">
     <a href="#top" class="logo"><img src="img/logo.svg" alt="IREK"></a>
     <nav class="menu">
-      <a href="#services">Услуги</a>
-      <a href="#cases">Работы</a>
-      <a href="#contacts">Контакты</a>
+      <a href="#cases" class="pill">работы</a>
+      <a href="#about" class="pill">о студии</a>
+      <a href="#contacts" class="pill">контакты</a>
+      <a href="https://t.me/irek_pro" class="pill pill-icon messenger-telegram" aria-label="Написать в Telegram"></a>
+      <a href="https://wa.me/79139169959" class="pill pill-icon messenger-whatsapp" aria-label="Написать в WhatsApp"></a>
     </nav>
-    <a href="tel:+79139169959" class="header-phone">+7 913 916-99-59</a>
-    <a href="https://t.me/irek_pro" class="messenger messenger-telegram" aria-label="Написать в Telegram"></a>
-    <a href="https://wa.me/79139169959" class="messenger messenger-whatsapp" aria-label="Написать в WhatsApp"></a>
-    <a href="#contacts" class="button button-small">Обсудить проект</a>
   </header>
 
   <main id="top">
 
-    <!-- Первый экран -->
+    <!-- Первый экран: манифест -->
     <section class="hero">
-      <div class="hero-video">
-        <span class="placeholder">Здесь будет шоурил (шаг 8)</span>
-      </div>
-      <div class="hero-content">
-        <p class="hero-place">Новосибирск · Москва · снимаем по всей России</p>
-        <h1>Корпоративные фильмы и видео, которые работают на бизнес</h1>
-        <p class="hero-lead">Видеопродакшн полного цикла: от идеи и сценария до готового фильма.</p>
-        <a href="#contacts" class="button">Обсудить проект</a>
-      </div>
-    </section>
+      <h1 class="manifesto">
+        Привет<span class="dot" aria-hidden="true"></span> мы снимаем
+        <span class="reel" aria-hidden="true"><span>шоурил</span></span>
+        корпоративные фильмы и&nbsp;рекламу, которые работают
+        на&nbsp;<span class="red">бизнес</span>
+      </h1>
 
-    <!-- Клиенты -->
-    <section class="section">
-      <h2>Нам доверяют</h2>
-      <ul class="clients">
-        <li>Норникель Спутник</li>
-        <li>Тотальный диктант</li>
-        <li>НГС.ру · 72.ру</li>
-        <li>Минтранс · ГАИ</li>
-        <li>NL International</li>
-        <li>Ангиофарм</li>
-        <li>Eltex</li>
-        <li>Брусника</li>
-        <li>Сибстекло</li>
-      </ul>
-    </section>
-
-    <!-- Цифры и награды -->
-    <section class="facts">
-      <div class="fact">
-        <strong>С 2015</strong>
-        <span>года в видеопродакшне</span>
+      <div class="about" id="about">
+        <div>
+          <h2>Что делаем</h2>
+          <p>Корпоративные и имиджевые фильмы, рекламные ролики, контент для соцсетей, репортажи с событий</p>
+        </div>
+        <div>
+          <h2>Клиенты</h2>
+          <p>Норникель Спутник, Тотальный диктант, НГС.ру, Минтранс&nbsp;·&nbsp;ГАИ, NL International, Ангиофарм, Eltex, Брусника, Сибстекло</p>
+        </div>
+        <div>
+          <h2>Награды</h2>
+          <p>Cannes Corporate Media &amp; TV Awards — Silver Dolphin, New York Festivals — Silver World Medal</p>
+        </div>
+        <div>
+          <h2>Где</h2>
+          <p>С 2015 года, 500+ проектов. Новосибирск, Москва, снимаем по всей России</p>
+        </div>
       </div>
-      <div class="fact">
-        <strong>500+</strong>
-        <span>проектов</span>
-      </div>
-      <div class="fact">
-        <strong>Silver Dolphin</strong>
-        <span>Cannes Corporate Media &amp; TV Awards</span>
-      </div>
-      <div class="fact">
-        <strong>Silver World Medal</strong>
-        <span>New York Festivals</span>
-      </div>
-    </section>
-
-    <!-- Услуги -->
-    <section class="section" id="services">
-      <h2>Что мы делаем</h2>
-      <div class="cards">
-        <article class="card">
-          <h3>Корпоративные и имиджевые фильмы</h3>
-          <p>Фильмы о компании, людях и производстве — для сайта, выставок, партнёров и сотрудников.</p>
-        </article>
-        <article class="card">
-          <h3>Рекламные и социальные ролики</h3>
-          <p>Ролики для ТВ и интернета, анимированная графика, макеты.</p>
-        </article>
-        <article class="card">
-          <h3>Контент для соцсетей</h3>
-          <p>Рилсы и шортсы на постоянной основе, нарезки из подкастов, видео с графикой.</p>
-        </article>
-        <article class="card">
-          <h3>Репортажи и события</h3>
-          <p>Видео с премий, конференций и мероприятий, отчётные ролики.</p>
-        </article>
-      </div>
-      <p class="note">Онлайн-трансляции — по запросу.</p>
     </section>
 
     <!-- Работы -->
     <section class="section" id="cases">
-      <h2>Работы</h2>
+      <h2 class="section-title">Работы</h2>
       <div class="cases">
-        <article class="case">
+        <a class="case" href="#">
           <div class="case-preview"></div>
-          <p class="case-client">Ангиофарм</p>
-          <h3>Корпоративный фильм о компании</h3>
-        </article>
-        <article class="case">
+          <h3>Ангиофарм</h3>
+          <p>Корпоративный фильм о компании</p>
+        </a>
+        <a class="case" href="#">
           <div class="case-preview"></div>
-          <p class="case-client">Eltex</p>
-          <h3>Корпоративный фильм о компании</h3>
-        </article>
-        <article class="case">
+          <h3>Eltex</h3>
+          <p>Корпоративный фильм о компании</p>
+        </a>
+        <a class="case" href="#">
           <div class="case-preview"></div>
-          <p class="case-client">Безопасность дорожного движения</p>
-          <h3>Фильмы, ТВ-реклама, анимация для экранов</h3>
-        </article>
-        <article class="case">
+          <h3>Безопасность дорожного движения</h3>
+          <p>Фильмы, ТВ-реклама, анимация для экранов</p>
+        </a>
+        <a class="case" href="#">
           <div class="case-preview"></div>
-          <p class="case-client">НГС.ру</p>
-          <h3>Ролики о героях премии и репортаж</h3>
-        </article>
-        <article class="case">
+          <h3>НГС.ру</h3>
+          <p>Ролики о героях премии и репортаж</p>
+        </a>
+        <a class="case" href="#">
           <div class="case-preview"></div>
-          <p class="case-client">NL International</p>
-          <h3>Подкаст и рилсы для соцсетей</h3>
-        </article>
-        <article class="case">
+          <h3>NL International</h3>
+          <p>Подкаст и рилсы для соцсетей</p>
+        </a>
+        <a class="case" href="#">
           <div class="case-preview"></div>
-          <p class="case-client">Тотальный диктант</p>
-          <h3>Юмористические новости перед стартом</h3>
-        </article>
+          <h3>Тотальный диктант</h3>
+          <p>Юмористические новости перед стартом</p>
+        </a>
       </div>
     </section>
 
     <!-- Заявка -->
     <section class="section contact" id="contacts">
-      <h2>Обсудим ваш проект</h2>
-      <p>Расскажите о задаче — ответим в течение дня.</p>
-      <form class="form">
-        <input type="text" name="name" placeholder="Имя">
-        <input type="tel" name="phone" placeholder="+7 (___) ___-__-__">
-        <textarea name="message" rows="4" placeholder="Коротко о проекте"></textarea>
-        <button type="submit" class="button">Отправить</button>
-      </form>
+      <h2 class="section-title">Обсудим<br>ваш проект<span class="dot" aria-hidden="true"></span></h2>
+      <div class="contact-body">
+        <p>Расскажите о задаче — ответим в течение дня.</p>
+        <form class="form">
+          <input type="text" name="name" placeholder="Имя">
+          <input type="tel" name="phone" placeholder="+7 (___) ___-__-__">
+          <textarea name="message" rows="4" placeholder="Коротко о проекте"></textarea>
+          <button type="submit" class="button">Отправить</button>
+        </form>
+      </div>
     </section>
 
   </main>
 
   <!-- Подвал -->
   <footer class="footer">
-    <img src="img/logo.svg" alt="IREK" class="footer-logo">
+    <p>#<span class="red">И</span>ДЕИ<span class="red">РЕ</span>КЛАМА<span class="red">К</span>ИНО · © 2015–2026</p>
     <div class="footer-links">
       <a href="tel:+79139169959">+7 913 916-99-59</a>
       <a href="mailto:hello@irek.pro">hello@irek.pro</a>
-      <a href="https://t.me/irek_pro" class="link-telegram">Telegram</a>
-      <a href="https://wa.me/79139169959" class="link-whatsapp">WhatsApp</a>
+      <a href="https://t.me/irek_pro">Telegram</a>
+      <a href="https://wa.me/79139169959">WhatsApp</a>
     </div>
   </footer>
 
