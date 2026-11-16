@@ -215,6 +215,9 @@ a {
 }
 
 .case-preview {
+  display: block;
+  width: 100%;
+  object-fit: cover;
   aspect-ratio: 16 / 9;
   background: var(--surface);
   border-radius: var(--radius);
