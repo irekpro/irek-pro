@@ -150,29 +150,53 @@ a {
 .reel {
   display: inline-block;
   position: relative;
-  overflow: hidden;
-  width: 2.4em;
-  height: 0.72em;
-  line-height: 0.72em;
-  text-align: center;
-  vertical-align: 0;
-  border-radius: 999px;
-  background: linear-gradient(135deg, #3a0d10, #141414 70%);
-  border: 1px dashed var(--muted);
+  width: 3.2em;
+  height: 0.9em;
+  vertical-align: -0.08em;
+  z-index: 1;
 }
 
-.reel span {
+.reel-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 0.3em;
+  background: #141414;
+  transition: height 0.5s ease, width 0.5s ease;
+}
+
+@media (hover: hover) {
+  .reel:hover .reel-box {
+    width: 5.08em;
+    height: 2.86em;
+  }
+}
+
+@media (hover: none) {
+  .reel {
+    cursor: pointer;
+  }
+
+  .reel.open {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    margin: 0.1em 0;
+  }
+}
+
+.reel video {
   position: absolute;
   inset: 0;
-  display: grid;
-  place-items: center;
-  line-height: 1;
-  font-size: 13px;
-  font-weight: 400;
-  letter-spacing: 0;
-  text-transform: none;
-  color: var(--muted);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
+
 
 .about {
   display: grid;

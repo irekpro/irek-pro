@@ -27,3 +27,6 @@ player.addEventListener("click", event => {
 document.addEventListener("keydown", event => {
   if (event.key === "Escape" && !player.hidden) closePlayer();
 });
+
+const reel = document.querySelector(".reel");
+reel.addEventListener("click", () => reel.classList.toggle("open"));
