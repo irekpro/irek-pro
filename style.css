@@ -200,20 +200,54 @@ a {
 
 .about {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
-  font-size: 14px;
-  line-height: 1.45;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 48px;
+  font-size: clamp(18px, 2.2vw, 30px);
+  line-height: 1.4;
 }
 
 .about h2 {
-  font-size: 14px;
+  font-size: clamp(20px, 2.6vw, 36px);
   font-weight: 700;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 
 .about p {
   color: var(--muted);
+}
+
+/* Награды */
+.awards-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
+  align-items: end;
+}
+
+.award {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.award img {
+  height: clamp(96px, 10vw, 140px);
+  width: auto;
+  object-fit: contain;
+}
+
+.award figcaption {
+  font-size: clamp(16px, 1.6vw, 22px);
+  line-height: 1.4;
+  color: var(--muted);
+}
+
+.award figcaption b {
+  display: block;
+  color: var(--text);
+  font-weight: 700;
 }
 
 /* Общие блоки */
@@ -381,6 +415,10 @@ a {
   .about {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .about > div:last-child {
+    grid-column: 1 / -1;
+  }
 }
 
 /* Телефон */
@@ -407,6 +445,7 @@ a {
   }
 
   .about,
+  .awards-list,
   .cases,
   .contact {
     grid-template-columns: 1fr;
