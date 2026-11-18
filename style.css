@@ -187,7 +187,7 @@ a {
 }
 
 .reel video,
-.reel .touch-preview img {
+.reel .touch-preview {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -491,12 +491,19 @@ a {
 }
 
 @media (hover: none) {
-  .reel video,
-  video.case-preview {
-    display: none;
+  .case {
+    position: relative;
   }
 
-  .touch-preview {
-    display: contents;
+  .reel video:not(.preview-playing),
+  video.case-preview:not(.preview-playing) {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  video:not(.preview-playing) + .touch-preview {
+    display: block;
   }
 }

@@ -13,12 +13,40 @@ function closePlayer() {
   document.body.style.overflow = "";
 }
 
+const touchPreview = window.matchMedia("(hover: none)");
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+function playPreview(video) {
+  video.muted = true;
+  video.play().then(() => {
+    video.classList.add("preview-playing");
+  }).catch(() => {
+    const image = video.nextElementSibling;
+    if (touchPreview.matches && !reduceMotion.matches && !video.classList.contains("preview-playing")) {
+      image.src = image.dataset.fallback;
+    }
+  });
+}
+
+const previewObserver = new IntersectionObserver(entries => {
+  for (const entry of entries) {
+    if (!entry.isIntersecting) continue;
+    previewObserver.unobserve(entry.target);
+    if (!touchPreview.matches || !reduceMotion.matches) playPreview(entry.target);
+  }
+});
+
+document.querySelectorAll(".reel video, video.case-preview").forEach(video => {
+  previewObserver.observe(video);
+});
+
 document.querySelectorAll(".case, .showreel-link").forEach(card => {
   card.addEventListener("click", event => {
     event.preventDefault();
     if (card.classList.contains("showreel-link") && event.detail > 0
-      && window.matchMedia("(hover: none)").matches && !card.classList.contains("open")) {
+      && touchPreview.matches && !card.classList.contains("open")) {
       card.classList.add("open");
+      if (!reduceMotion.matches) playPreview(card.querySelector("video"));
       return;
     }
     if (card.dataset.kinescope) openPlayer(card.dataset.kinescope);
