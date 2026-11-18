@@ -186,7 +186,8 @@ a {
   }
 }
 
-.reel video {
+.reel video,
+.reel .touch-preview img {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -202,7 +203,7 @@ a {
   background: rgb(0 0 0 / 42%);
   color: #fff;
   font: inherit;
-  font-size: 0.2em;
+  font-size: 0.3em;
   letter-spacing: 0;
   white-space: nowrap;
   opacity: 0;
@@ -482,5 +483,20 @@ a {
   .footer {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+.touch-preview {
+  display: none;
+}
+
+@media (hover: none) {
+  .reel video,
+  video.case-preview {
+    display: none;
+  }
+
+  .touch-preview {
+    display: contents;
   }
 }
