@@ -13,9 +13,14 @@ function closePlayer() {
   document.body.style.overflow = "";
 }
 
-document.querySelectorAll(".case").forEach(card => {
+document.querySelectorAll(".case, .showreel-link").forEach(card => {
   card.addEventListener("click", event => {
     event.preventDefault();
+    if (card.classList.contains("showreel-link") && event.detail > 0
+      && window.matchMedia("(hover: none)").matches && !card.classList.contains("open")) {
+      card.classList.add("open");
+      return;
+    }
     if (card.dataset.kinescope) openPlayer(card.dataset.kinescope);
   });
 });
@@ -27,6 +32,3 @@ player.addEventListener("click", event => {
 document.addEventListener("keydown", event => {
   if (event.key === "Escape" && !player.hidden) closePlayer();
 });
-
-const reel = document.querySelector(".reel");
-reel.addEventListener("click", () => reel.classList.toggle("open"));
