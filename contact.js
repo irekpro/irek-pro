@@ -2,6 +2,10 @@ const form = document.querySelector(".form");
 const submitButton = form.querySelector('button[type="submit"]');
 const status = form.querySelector(".form-status");
 
+if (location.origin === "https://irekpro.github.io" || location.origin === "https://irek.pro") {
+  form.action = "https://functions.yandexcloud.net/d4e7jh7k65ji9jv9leh4";
+}
+
 form.addEventListener("submit", async event => {
   event.preventDefault();
   submitButton.disabled = true;
