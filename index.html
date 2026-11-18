@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://irek.pro/">
   <title>IREK — корпоративные фильмы и видеопродакшн · Новосибирск, Москва</title>
   <meta name="description" content="Видеопродакшн полного цикла с 2015 года: корпоративные и имиджевые фильмы, рекламные ролики, контент для соцсетей. Новосибирск, Москва, вся Россия. Награды Cannes Corporate и New York Festivals.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,11 +45,11 @@
       <div class="about" id="about">
         <div>
           <h2>Что делаем</h2>
-          <p>Корпоративные и имиджевые фильмы, рекламные ролики, контент для соцсетей, репортажи с событий</p>
+          <p>Корпоративные и имиджевые фильмы, рекламные ролики, контент для соцсетей, репортажи с событий и видео с ИИ.</p>
         </div>
         <div>
           <h2>Клиенты</h2>
-          <p>Норникель Спутник, Тотальный диктант, НГС.ру, Минтранс&nbsp;·&nbsp;ГАИ, NL International, Ангиофарм, Eltex, Брусника, Сибстекло</p>
+          <p>Норникель Спутник, Тотальный диктант, Шкулев Холдинг, NGS.RU, Форпост, NL International, Ангиофарм, Eltex, Брусника, Сибстекло</p>
         </div>
         <div>
           <h2>Где</h2>
@@ -78,33 +79,33 @@
       <div class="cases">
         <a class="case" href="https://kinescope.io/p6NX4yf9iyDmGcFty9vUhx" data-kinescope="p6NX4yf9iyDmGcFty9vUhx">
           <video class="case-preview" src="video/angiopharm.mp4" poster="video/angiopharm.jpg" autoplay muted loop playsinline preload="metadata"></video>
-          <h3>Ангиофарм</h3>
+          <h3>ANGIOPHARM</h3>
           <p>Корпоративный фильм о компании</p>
         </a>
         <a class="case" href="https://kinescope.io/aewE1qTpUTdKJHC9QPjDRK" data-kinescope="aewE1qTpUTdKJHC9QPjDRK">
           <video class="case-preview" src="video/eltex.mp4" poster="video/eltex.jpg" autoplay muted loop playsinline preload="metadata"></video>
-          <h3>Eltex</h3>
+          <h3>ELTEX</h3>
           <p>Корпоративный фильм о компании</p>
         </a>
         <a class="case" href="https://kinescope.io/oaCFeUJs9mbUwrPq7HRx97" data-kinescope="oaCFeUJs9mbUwrPq7HRx97">
           <video class="case-preview" src="video/bdd.mp4" poster="video/bdd.jpg" autoplay muted loop playsinline preload="metadata"></video>
-          <h3>Безопасность дорожного движения</h3>
-          <p>Фильмы, ТВ-реклама, анимация для экранов</p>
+          <h3>Жизнь — не симуляция</h3>
+          <p>Фильм по профилактике детского дорожно-транспортного травматизма</p>
         </a>
         <a class="case" href="https://kinescope.io/fuksabvV3Pr9szJeCFMuno" data-kinescope="fuksabvV3Pr9szJeCFMuno">
           <video class="case-preview" src="video/ngs.mp4" poster="video/ngs.jpg" autoplay muted loop playsinline preload="metadata"></video>
-          <h3>НГС.ру</h3>
-          <p>Ролики о героях премии и репортаж</p>
+          <h3>Премия НГС</h3>
+          <p>Видеопортреты героев премии НГС и репортаж с церемонии</p>
         </a>
         <a class="case" href="https://kinescope.io/hKMzG1i4WtXLppjwK68DS7" data-kinescope="hKMzG1i4WtXLppjwK68DS7">
           <video class="case-preview" src="video/nl.mp4" poster="video/nl.jpg" autoplay muted loop playsinline preload="metadata"></video>
           <h3>NL International</h3>
-          <p>Подкаст и рилсы для соцсетей</p>
+          <p>Подкасты и рилсы для соцсетей</p>
         </a>
         <a class="case" href="#">
           <video class="case-preview" src="video/diktant.mp4" poster="video/diktant.jpg" autoplay muted loop playsinline preload="metadata"></video>
           <h3>Тотальный диктант</h3>
-          <p>Юмористические новости перед стартом</p>
+          <p>Юмористические новости перед началом диктанта</p>
         </a>
       </div>
     </section>
@@ -114,11 +115,12 @@
       <h2 class="section-title">Обсудим<br>ваш проект<span class="dot" aria-hidden="true"></span></h2>
       <div class="contact-body">
         <p>Расскажите о задаче — ответим в течение дня.</p>
-        <form class="form">
-          <input type="text" name="name" placeholder="Имя">
-          <input type="tel" name="phone" placeholder="+7 (___) ___-__-__">
-          <textarea name="message" rows="4" placeholder="Коротко о проекте"></textarea>
+        <form class="form" action="/api/contact" method="post">
+          <input type="text" name="name" placeholder="Имя" aria-label="Имя" autocomplete="name" maxlength="100" required>
+          <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" aria-label="Телефон" autocomplete="tel" maxlength="32" required>
+          <textarea name="message" rows="4" placeholder="Коротко о проекте" aria-label="Коротко о проекте" maxlength="2000" required></textarea>
           <button type="submit" class="button">Отправить</button>
+          <div class="form-status" role="status"></div>
         </form>
       </div>
     </section>
@@ -141,6 +143,23 @@
     <div class="player-frame"></div>
   </div>
   <script src="player.js?v=5"></script>
+  <script src="contact.js"></script>
+  <script>
+    if (location.hostname === "irek.pro" &&
+        !document.querySelector('meta[name="robots"]')?.content.includes("noindex")) {
+      window.ym = window.ym || function () {
+        (window.ym.a = window.ym.a || []).push(arguments);
+      };
+      window.ym.l = Date.now();
+
+      const tag = document.createElement("script");
+      tag.async = true;
+      tag.src = "https://mc.yandex.ru/metrika/tag.js";
+      document.head.append(tag);
+
+      window.ym(94976130, "init", {});
+    }
+  </script>
 
 </body>
 </html>
