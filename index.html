@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=15">
+  <link rel="stylesheet" href="style.css?v=16">
 </head>
 <body>
 
@@ -30,18 +30,22 @@
 
     <!-- Первый экран: манифест -->
     <section class="hero">
-      <h1 class="manifesto">
-        Привет<span class="dot" aria-hidden="true"></span> мы снимаем
-        <a class="reel showreel-link" href="#player" data-kinescope="wSWFem3UQpCarjkJjGPUiD">
-          <span class="reel-box">
-            <video src="video/reel-teaser.mp4" poster="video/reel-teaser.jpg" muted loop playsinline aria-hidden="true" preload="none"></video>
-            <img class="touch-preview" src="video/reel-teaser.jpg" alt="" data-fallback="video/reel-teaser.webp?v=2">
-            <span class="reel-label">Смотреть шоурил</span>
-          </span>
-        </a>
-        корпоративные фильмы и&nbsp;рекламу, которые работают
-        на&nbsp;<span class="red">бизнес</span>
-      </h1>
+      <div class="hero-intro">
+        <h1 class="manifesto">
+          Привет<span class="dot" aria-hidden="true"></span> мы снимаем
+          <a class="reel showreel-link" href="#player" data-kinescope="wSWFem3UQpCarjkJjGPUiD">
+            <span class="reel-box">
+              <video src="video/reel-teaser.mp4" poster="video/reel-teaser.jpg" muted loop playsinline aria-hidden="true" preload="none"></video>
+              <img class="touch-preview" src="video/reel-teaser.jpg" alt="" data-fallback="video/reel-teaser.webp?v=2">
+              <span class="reel-play" aria-hidden="true"></span>
+              <span class="reel-label">Смотреть шоурил</span>
+            </span>
+          </a>
+          корпоративные фильмы и&nbsp;рекламу, которые работают
+          на&nbsp;<span class="red">бизнес</span>
+        </h1>
+        <a class="pill hero-works" href="#cases">Смотреть работы</a>
+      </div>
 
       <div class="about" id="about">
         <div>
