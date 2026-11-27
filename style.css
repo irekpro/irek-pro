@@ -7,6 +7,10 @@
   --accent: #fa1821;
   --radius: 14px;
   --gutter: 32px;
+  --header-padding: 20px;
+  --logo-height: 60px;
+  --anchor-clearance: calc(var(--logo-height) + 2 * var(--header-padding) + 16px);
+  --section-padding: 72px;
 }
 
 * {
@@ -72,7 +76,7 @@ a {
   display: flex;
   align-items: center;
   gap: 24px;
-  padding: 20px var(--gutter);
+  padding: var(--header-padding) var(--gutter);
   position: sticky;
   top: 0;
   background: rgba(0, 0, 0, 0.8);
@@ -81,7 +85,7 @@ a {
 }
 
 .logo img {
-  height: 60px;
+  height: var(--logo-height);
   display: block;
 }
 
@@ -307,8 +311,17 @@ a {
 
 /* Общие блоки */
 .section {
-  padding: 72px var(--gutter);
+  padding: var(--section-padding) var(--gutter);
   border-top: 1px solid var(--line);
+}
+
+#about {
+  scroll-margin-top: var(--anchor-clearance);
+}
+
+#cases,
+#contacts {
+  scroll-margin-top: max(0px, calc(var(--anchor-clearance) - var(--section-padding)));
 }
 
 .section-title {
@@ -480,15 +493,8 @@ a {
 @media (max-width: 760px) {
   :root {
     --gutter: 16px;
-  }
-
-  .header {
-    padding-top: 12px;
-    padding-bottom: 12px;
-  }
-
-  .logo img {
-    height: 36px;
+    --header-padding: 12px;
+    --logo-height: 36px;
   }
 
   .menu .pill:not(.pill-icon):not([href="#contacts"]) {
