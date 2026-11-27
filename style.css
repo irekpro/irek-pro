@@ -181,27 +181,6 @@ a {
 }
 
 @media (hover: none) {
-  .reel:not(.open):not(:focus-visible) .reel-play {
-    position: absolute;
-    inset: 50% auto auto 50%;
-    display: grid;
-    place-items: center;
-    width: 26px;
-    height: 26px;
-    border-radius: 50%;
-    background: rgb(0 0 0 / 65%);
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-  }
-
-  .reel-play::before {
-    content: "";
-    margin-left: 2px;
-    border: solid transparent;
-    border-width: 5px 0 5px 8px;
-    border-left-color: #fff;
-  }
-
   .reel.open {
     display: block;
     width: 100%;
@@ -220,9 +199,40 @@ a {
   object-fit: cover;
 }
 
-.hero-works,
-.reel-play {
+.hero-works {
   display: none;
+}
+
+.reel-play {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgb(0 0 0 / 65%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.reel-play::before {
+  content: "";
+  margin-left: 2px;
+  border: solid transparent;
+  border-width: 5px 0 5px 8px;
+  border-left-color: #fff;
+}
+
+.reel.open .reel-play,
+.reel:focus-visible .reel-play {
+  display: none;
+}
+
+@media (hover: hover) {
+  .reel:hover .reel-play {
+    display: none;
+  }
 }
 
 .reel-label {
